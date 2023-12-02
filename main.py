@@ -37,4 +37,4 @@ def distance(point_a: tuple[int], point_b: tuple[int], step: int, matrix: list[l
 
 
 # print(matrix_to_graph(read('/home/Anya/UCU/pb/discrete_maths_project/example.csv')))
-print(distance((0,0), (2,2), 1, read('/home/Anya/UCU/pb/discrete_maths_project/example.csv')))
+# print(distance((0,0), (2,2), 1, read('/home/Anya/UCU/pb/discrete_maths_project/example.csv')))
