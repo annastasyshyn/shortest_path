@@ -27,16 +27,18 @@ def matrix_to_graph(matr: list[list[int]]) -> dict:
                 graph[vertex].append((i, j + 1))
     return graph
 
-def calculate_distance(point_a: tuple[int], point_b: tuple[int], step: int, matrix: list[list[int]]):
-    """-"""
+def calculate_distance(point_a: tuple[int], point_b: tuple[int], \
+step: int, matrix: list[list[int]]):
+    """Calculate distance"""
     height_difference = abs(matrix[point_a[0]][point_a[1]] - matrix[point_b[0]][point_b[1]])
     physical_distance = math.sqrt((point_a[0] \
 - point_b[0]) ** 2 + (point_a[1] - point_b[1]) ** 2) * step
     edge_weight = math.sqrt(height_difference ** 2 + physical_distance ** 2)
     return edge_weight
 
-def dijkstra(graph, start, end, matr, step):
-    """-"""
+def dijkstra(graph: dict, start: tuple, end: tuple, \
+matr: list[list[int]], step: int) -> list[tuple[int]]:
+    """Dijkstra algorithm"""
     distances = {vertex: float('infinity') for vertex in graph}
     distances[start] = 0
     priority_queue = [(0, start)]
@@ -63,10 +65,10 @@ def dijkstra(graph, start, end, matr, step):
     path.insert(0, start)
     return path
 
-matrix = read('/home/Anya/UCU/pb/discrete_maths_project/matr1.csv')
-gr = matrix_to_graph(matrix)
-a = (0,0)
-b = (999,999)
-STEP = 1
-path = dijkstra(gr, a, b, matrix, STEP)
-print(path)
+# matrix = read('/home/Anya/UCU/pb/discrete_maths_project/matr1.csv')
+# gr = matrix_to_graph(matrix)
+# a = (0,0)
+# b = (999,999)
+# STEP = 1
+# path = dijkstra(gr, a, b, matrix, STEP)
+# print(path)
