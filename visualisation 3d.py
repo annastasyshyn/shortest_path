@@ -1,5 +1,5 @@
 """
-Path visualization
+3d Path visualization
 """
 import random
 import numpy as np
@@ -24,5 +24,5 @@ ax.set_xlabel('Column Index')
 ax.set_ylabel('Row Index')
 ax.set_zlabel('Height')
 
-ax.set_title('3D Path on Matrix of Height')
+ax.set_title('3D path visualisation')
 plt.show()
